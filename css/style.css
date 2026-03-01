@@ -338,3 +338,24 @@ ul {
     gap: 2rem;
   }
 }
+/* Project Grid Layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.project-item.grid-col-2 {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-item.grid-col-2 {
+    grid-column: span 1;
+  }
+}
