@@ -1,0 +1,150 @@
+/* Animations & Interaction States */
+
+/* Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--c-sandstone);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-text {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--c-deep-ocean);
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Scroll Reveal Classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-fade {
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+}
+
+.reveal-fade.active {
+    opacity: 1;
+}
+
+.reveal-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+    transition-delay: 0.4s;
+}
+
+/* Image Parallax/Scale Effects */
+.img-container {
+    overflow: hidden;
+}
+
+.img-scale {
+    transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transform: scale(1.1);
+}
+
+.img-scale.active {
+    transform: scale(1);
+}
+
+/* Hover Effects for Cards/Projects */
+.hover-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+}
+
+.hover-item img {
+    transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-item:hover img {
+    transform: scale(1.05);
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 42, 70, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.hover-item:hover .hover-overlay {
+    opacity: 1;
+}
+
+.hover-overlay-content {
+    transform: translateY(20px);
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-item:hover .hover-overlay-content {
+    transform: translateY(0);
+}
+
+.hover-title {
+    color: var(--c-white);
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hover-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}

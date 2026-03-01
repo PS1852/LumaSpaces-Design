@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal | LumaSpaces Design Co.</title>
+    <meta name="description"
+        content="Design insights, coastal inspiration, and architectural notes from the team at LumaSpaces Design Co.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <style>
+        .blog-card {
+            border-bottom: 1px solid var(--c-border);
+            padding-bottom: 2rem;
+            margin-bottom: 3rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media(min-width: 768px) {
+            .blog-card {
+                grid-template-columns: 1fr 1.5fr;
+                align-items: center;
+                gap: 4rem;
+            }
+        }
+
+        .blog-meta {
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--c-terracotta);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .blog-meta span:not(:last-child)::after {
+            content: '•';
+            margin-left: 1rem;
+            color: var(--c-text-muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader-text">LumaSpaces</div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">LumaSpaces</a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="blog.html" class="nav-link active">Journal</a>
+                <a href="book.html" class="btn btn-primary"
+                    style="padding: 0.5rem 1.5rem;"><span>Consultation</span></a>
+            </nav>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="section-padding"
+            style="padding-top: calc(var(--space-xl) + 4rem); background-color: var(--c-sandstone);">
+            <div class="container reveal">
+                <h1 style="margin-bottom: 1rem;">The Journal</h1>
+                <p style="font-size: 1.25rem;">Musings on design, architecture, materiality, and the art of coastal
+                    living.</p>
+            </div>
+        </section>
+
+        <!-- Blog Feed -->
+        <section class="section-padding" style="background-color: var(--c-white);">
+            <div class="container" style="max-width: 1000px;">
+
+                <!-- Post 1 -->
+                <article class="blog-card reveal">
+                    <a href="#" class="img-container hover-item reveal-delay-1" style="height: 400px; display: block;">
+                        <img src="https://images.unsplash.com/photo-1623862215440-ceb7bb2155ce?q=80&w=800&auto=format&fit=crop"
+                            alt="Natural Textures" class="img-scale"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </a>
+                    <div class="reveal-delay-2">
+                        <div class="blog-meta">
+                            <span>Design Notes</span>
+                            <span>Oct 12, 2026</span>
+                        </div>
+                        <h2 style="font-size: 2rem; margin-bottom: 1rem;">
+                            <a href="#" style="color: var(--c-deep-ocean);">Embracing Natural Textures in Modern
+                                Spaces</a>
+                        </h2>
+                        <p style="margin-bottom: 1.5rem;">How the integration of organic materials like travertine, raw
+                            timber, and linen can soften the geometric rigidity of contemporary architecture.</p>
+                        <a href="#" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Read Article</a>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="blog-card reveal">
+                    <a href="#" class="img-container hover-item reveal-delay-1" style="height: 400px; display: block;">
+                        <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?q=80&w=800&auto=format&fit=crop"
+                            alt="Light and Shadow in Architecture" class="img-scale"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </a>
+                    <div class="reveal-delay-2">
+                        <div class="blog-meta">
+                            <span>Architecture</span>
+                            <span>Sep 28, 2026</span>
+                        </div>
+                        <h2 style="font-size: 2rem; margin-bottom: 1rem;">
+                            <a href="#" style="color: var(--c-deep-ocean);">The interplay of Light and Shadow</a>
+                        </h2>
+                        <p style="margin-bottom: 1.5rem;">We explore how orientation and architectural apertures can
+                            completely transform the emotional resonance of a room throughout the day.</p>
+                        <a href="#" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Read Article</a>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="blog-card reveal">
+                    <a href="#" class="img-container hover-item reveal-delay-1" style="height: 400px; display: block;">
+                        <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=800&auto=format&fit=crop"
+                            alt="Curating Objects" class="img-scale"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </a>
+                    <div class="reveal-delay-2">
+                        <div class="blog-meta">
+                            <span>Styling</span>
+                            <span>Sep 10, 2026</span>
+                        </div>
+                        <h2 style="font-size: 2rem; margin-bottom: 1rem;">
+                            <a href="#" style="color: var(--c-deep-ocean);">The Art of Curating the Coffee Table</a>
+                        </h2>
+                        <p style="margin-bottom: 1.5rem;">A step-by-step guide to styling functional yet sculptural
+                            vignettes that elevate your living space without feeling cluttered.</p>
+                        <a href="#" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Read Article</a>
+                    </div>
+                </article>
+
+                <!-- Pagination Placeholder -->
+                <div style="text-align: center; margin-top: 4rem;" class="reveal">
+                    <button class="btn btn-outline"
+                        style="border: none; border-bottom: 1px solid var(--c-deep-ocean); padding: 0.5rem 0;">Load More
+                        Stories</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid reveal">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">LumaSpaces</a>
+                    <p style="max-width: 300px;">Sydney-inspired interior design studio creating spaces that elevate the
+                        human experience through considered aesthetics.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Journal</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:lumaspacesdesign@gmail.com">lumaspacesdesign@gmail.com</a></li>
+                        <li><a href="tel:+61255500175">+61 2 5550 0175</a></li>
+                        <li style="color: rgba(255,255,255,0.7); margin-top: 1rem;">Sydney, NSW, Australia</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom reveal reveal-delay-2">
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> LumaSpaces Design Co. All Rights Reserved.
+                </p>
+                <p>Designed with luxury in mind.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

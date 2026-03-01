@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LumaSpaces Design Co. | Luxury Interior Design</title>
+    <meta name="description" content="Sydney-inspired luxury interior design studio creating minimal, coastal, and elegant living spaces.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader-text">LumaSpaces</div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">LumaSpaces</a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="blog.html" class="nav-link">Journal</a>
+                <a href="book.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem;"><span>Consultation</span></a>
+            </nav>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" style="position: relative; height: 100vh; display: flex; align-items: center; overflow: hidden;">
+            <div class="hero-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+                <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop" alt="Luxury Coastal Living Room" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85);" class="img-scale">
+            </div>
+            <div class="container">
+                <div class="hero-content reveal" style="max-width: 800px;">
+                    <h1 style="color: var(--c-white); margin-bottom: 1.5rem;">Curated Spaces for Modern Living.</h1>
+                    <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.25rem; margin-bottom: 2.5rem;">Sydney-inspired interior design studio blending coastal calm with sophisticated luxury.</p>
+                    <a href="projects.html" class="btn btn-primary"><span>View Portfolio</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Intro Section -->
+        <section class="section-padding" style="background-color: var(--c-white);">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                    <div class="reveal">
+                        <h2 style="margin-bottom: 1.5rem;">Elevating the Everyday.</h2>
+                        <p style="margin-bottom: 2rem;">At LumaSpaces Design Co., we believe your environment deeply influences your well-being. Our approach is grounded in creating serene, tactile, and highly functional spaces that reflect the beauty of Sydney's coastal light and natural textures.</p>
+                        <a href="services.html" class="btn btn-outline" style="padding: 0.75rem 2rem;">Learn More</a>
+                    </div>
+                    <div class="reveal reveal-delay-2 img-container">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000&auto=format&fit=crop" alt="Elegant interior details" class="img-scale" style="width: 100%; height: 600px; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;" class="reveal">
+                    <h2>Selected Works</h2>
+                    <a href="projects.html" class="nav-link" style="padding-bottom: 0.25rem;">View All</a>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                    <!-- Project 1 -->
+                    <a href="projects.html" class="hover-item reveal reveal-delay-1" style="height: 500px;">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop" alt="Bondi Residence" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="hover-overlay">
+                            <div class="hover-overlay-content">
+                                <h3 class="hover-title">Bondi Residence</h3>
+                                <p class="hover-subtitle">Full-Service Design</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- Project 2 -->
+                    <a href="projects.html" class="hover-item reveal reveal-delay-2" style="height: 500px;">
+                        <img src="https://images.unsplash.com/photo-1600607687931-cebf06fa1c12?q=80&w=800&auto=format&fit=crop" alt="Manly Retreat" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="hover-overlay">
+                            <div class="hover-overlay-content">
+                                <h3 class="hover-title">Manly Retreat</h3>
+                                <p class="hover-subtitle">Styling & Furnishing</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 3 -->
+                    <a href="projects.html" class="hover-item reveal reveal-delay-3" style="height: 500px;">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Vaucluse Estate" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="hover-overlay">
+                            <div class="hover-overlay-content">
+                                <h3 class="hover-title">Vaucluse Estate</h3>
+                                <p class="hover-subtitle">Renovation</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Brief Section -->
+        <section class="section-padding" style="background-color: var(--c-deep-ocean); color: var(--c-white);">
+            <div class="container reveal">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+                    <h2 style="color: var(--c-white); margin-bottom: 1rem;">Our Expertise</h2>
+                    <p style="color: rgba(255, 255, 255, 0.8); margin: 0 auto;">From conceptual design to final curation, we bring a tailored approach to every project.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem;">
+                    <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2rem;">
+                        <h3 style="color: var(--c-white); margin-bottom: 1rem; font-size: 1.5rem;">01. Full-Service Design</h3>
+                        <p style="color: rgba(255, 255, 255, 0.7); font-size: 1rem;">Comprehensive interior design solutions for renovations and new builds, managed from concept to completion.</p>
+                    </div>
+                    <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2rem;">
+                        <h3 style="color: var(--c-white); margin-bottom: 1rem; font-size: 1.5rem;">02. Styling & Furnishing</h3>
+                        <p style="color: rgba(255, 255, 255, 0.7); font-size: 1rem;">Curating bespoke furniture, art, and decor to breathe new life into your existing architectural spaces.</p>
+                    </div>
+                    <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2rem;">
+                        <h3 style="color: var(--c-white); margin-bottom: 1rem; font-size: 1.5rem;">03. E-Design</h3>
+                        <p style="color: rgba(255, 255, 255, 0.7); font-size: 1rem;">Accessible luxury through virtual design consultations, yielding custom floor plans and shoppable links.</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 4rem;">
+                    <a href="services.html" class="btn btn-outline" style="color: var(--c-white); border-color: var(--c-white);">View All Services</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid reveal">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">LumaSpaces</a>
+                    <p style="max-width: 300px;">Sydney-inspired interior design studio creating spaces that elevate the human experience through considered aesthetics.</p>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Journal</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:lumaspacesdesign@gmail.com">lumaspacesdesign@gmail.com</a></li>
+                        <li><a href="tel:+61255500175">+61 2 5550 0175</a></li>
+                        <li style="color: rgba(255,255,255,0.7); margin-top: 1rem;">Sydney, NSW, Australia</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom reveal reveal-delay-2">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> LumaSpaces Design Co. All Rights Reserved.</p>
+                <p>Designed with luxury in mind.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

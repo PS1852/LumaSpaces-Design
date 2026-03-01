@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Consultation | LumaSpaces Design Co.</title>
+    <meta name="description"
+        content="Inquire about our luxury interior design services and book a consultation with LumaSpaces Design Co.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <style>
+        .form-group {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .form-control {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--c-border);
+            padding: 1rem 0;
+            font-family: var(--font-body);
+            font-size: 1.125rem;
+            color: var(--c-charcoal);
+            transition: border-color var(--t-fast);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--c-terracotta);
+        }
+
+        .form-label {
+            position: absolute;
+            top: 1rem;
+            left: 0;
+            font-size: 1.125rem;
+            color: var(--c-text-muted);
+            pointer-events: none;
+            transition: all var(--t-fast);
+        }
+
+        .form-control:focus~.form-label,
+        .form-control:not(:placeholder-shown)~.form-label {
+            top: -1rem;
+            font-size: 0.875rem;
+            color: var(--c-terracotta);
+        }
+
+        /* Checkbox styling */
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+        }
+
+        .checkbox-group input {
+            accent-color: var(--c-terracotta);
+            width: 1.25rem;
+            height: 1.25rem;
+            cursor: pointer;
+        }
+
+        .form-success {
+            display: none;
+            background: rgba(212, 137, 106, 0.1);
+            border-left: 4px solid var(--c-terracotta);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader-text">LumaSpaces</div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">LumaSpaces</a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="blog.html" class="nav-link">Journal</a>
+                <a href="book.html" class="btn btn-primary"
+                    style="padding: 0.5rem 1.5rem;"><span>Consultation</span></a>
+            </nav>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-padding"
+            style="padding-top: calc(var(--space-xl) + 4rem); background-color: var(--c-sandstone); min-height: 100vh; display: flex; align-items: center;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr; gap: 4rem; max-width: 1100px; margin: 0 auto;">
+
+                    <!-- Form Area -->
+                    <div style="background-color: var(--c-white); padding: 4rem; box-shadow: 0 20px 40px rgba(0,0,0,0.03);"
+                        class="reveal">
+                        <div style="margin-bottom: 3rem;">
+                            <h1 style="margin-bottom: 1rem; font-size: clamp(2rem, 4vw, 3rem);">Start Your Journey</h1>
+                            <p>Tell us about your project and we will reach out to schedule an initial consultation.</p>
+                        </div>
+
+                        <div id="successMessage" class="form-success">
+                            <h3 style="margin-bottom: 0.5rem;">Thank you for your inquiry.</h3>
+                            <p style="margin-bottom: 0; font-size: 1rem;">We have received your details and will
+                                normally respond within 24-48 business hours to arrange our consultation.</p>
+                        </div>
+
+                        <form id="consultationForm">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="firstName" placeholder=" " required>
+                                    <label for="firstName" class="form-label">First Name</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="lastName" placeholder=" " required>
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                </div>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder=" " required>
+                                    <label for="email" class="form-label">Email Address</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" id="phone" placeholder=" ">
+                                    <label for="phone" class="form-label">Phone Number (Optional)</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="margin-top: 2rem; margin-bottom: 1.5rem;">
+                                <p
+                                    style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--c-deep-ocean); margin-bottom: 1rem;">
+                                    Services of Interest</p>
+                                <label class="checkbox-group">
+                                    <input type="checkbox" name="services" value="Full-Service">
+                                    <span>Full-Service Interior Design</span>
+                                </label>
+                                <label class="checkbox-group">
+                                    <input type="checkbox" name="services" value="Styling">
+                                    <span>Styling & Furnishing</span>
+                                </label>
+                                <label class="checkbox-group">
+                                    <input type="checkbox" name="services" value="E-Design">
+                                    <span>Virtual E-Design</span>
+                                </label>
+                            </div>
+
+                            <div class="form-group" style="margin-top: 2rem;">
+                                <textarea class="form-control" id="details" rows="4" placeholder=" "
+                                    required></textarea>
+                                <label for="details" class="form-label">Project Details & Timeline</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary"
+                                style="margin-top: 2rem; width: 100%;"><span>Submit Inquiry</span></button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid reveal">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">LumaSpaces</a>
+                    <p style="max-width: 300px;">Sydney-inspired interior design studio creating spaces that elevate the
+                        human experience through considered aesthetics.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Journal</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:lumaspacesdesign@gmail.com">lumaspacesdesign@gmail.com</a></li>
+                        <li><a href="tel:+61255500175">+61 2 5550 0175</a></li>
+                        <li style="color: rgba(255,255,255,0.7); margin-top: 1rem;">Sydney, NSW, Australia</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom reveal reveal-delay-2">
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> LumaSpaces Design Co. All Rights Reserved.
+                </p>
+                <p>Designed with luxury in mind.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('consultationForm');
+            const successMsg = document.getElementById('successMessage');
+
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault(); // Prevent standard POST
+
+                    // Simple validation is handled by HTML5 `required` attribute.
+                    // If we reach here, the form is valid enough.
+
+                    // Simulate API call/processing delay
+                    const btn = form.querySelector('button[type="submit"] span');
+                    const originalText = btn.textContent;
+                    btn.textContent = 'Sending...';
+
+                    setTimeout(() => {
+                        form.style.display = 'none'; // Hide form
+                        successMsg.style.display = 'block'; // Show success message
+                        window.scrollTo({ top: successMsg.offsetTop - 100, behavior: 'smooth' });
+                    }, 800);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
